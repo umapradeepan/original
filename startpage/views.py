@@ -5,6 +5,8 @@ from .models import ResultItem
 import urllib.request, json
 
 #Initial start page, user not yet chosen whether to search by state or park code
+def gotoStart (request):
+    return HttpResponseRedirect ('/start/')
 def startpageView (request):
     all_result_items = ResultItem.objects.all()
     return render (request, 'startpagechoose.html',
