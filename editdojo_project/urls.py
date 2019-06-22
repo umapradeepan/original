@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 
-from startpage.views import startpageView, startstateView, startparkView
+from startpage.views import gotoStart, startpageView, startstateView, startparkView
 from startpage.views import searchParks, searchParks2, setUpParkView
 
 from parkpage.views import parkpageView
@@ -29,7 +29,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('', gotoStart),
     path('start/', startpageView),
     path('startstate/', startstateView),
     path('startpark/', startparkView),
